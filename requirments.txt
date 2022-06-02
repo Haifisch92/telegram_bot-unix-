@@ -1,0 +1,7 @@
+Pyrogram
+TGCrypto
+pandas
+openpyxl
+pyfiglet
+termcolor
+colorama
