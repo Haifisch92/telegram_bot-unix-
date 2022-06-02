@@ -1,8 +1,4 @@
 from pyrogram import Client
-from pyrogram.handlers import MessageHandler
-from pyrogram.raw.functions.messages import GetPollVotes
-from pyrogram.raw.types import InputPeerChannel
-import config
 import datetime
 import time
 import sqliteorm
@@ -13,8 +9,6 @@ from colorama import init
 init(strip=not sys.stdout.isatty()) 
 from termcolor import cprint 
 from pyfiglet import figlet_format
-import emojitelegram as emoji
-import asyncio
 
 def logo():
     cprint(figlet_format('telegram bot', font='standard'),
@@ -56,9 +50,6 @@ while True:
     spam_channel = setting[13]
     exit = setting[14]
     #app.send_message("me",f'{setting}')
-    with open('setting.txt','w') as f:
-        f.write(f'{setting}')
-        f.close()
     if scraping == True:
         if scraping_limit == 0:
             scraping_limit = None
